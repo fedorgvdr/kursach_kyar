@@ -1,0 +1,212 @@
+.book{
+  &__left{
+    max-width: 511px;
+    width: 100%;
+    margin-left: 69px;
+    .section__sub{
+      margin-bottom: 16px;
+    }
+    .section__title{
+      margin-left: -3px;
+    }
+  }
+  &__right{
+    max-width: 485px;
+    width: 100%;
+    position: relative;
+    height: fit-content ;
+    padding-top: 78px;
+    margin-right: 19px;
+    &:before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: -95px;
+      right: -10px;
+      position: absolute;
+      background: url('#{$img-path}/blue.svg') no-repeat top right;
+      background-size: contain;
+
+    }
+  }
+  &__features{
+    margin-top: 31px;
+    margin-left: -3px;
+
+  }
+  &__feature{
+    margin-bottom: 48px;
+    padding-left: 68px;
+    position: relative;
+    &:before{
+      content: '';
+      width: 47px;
+      height: 47px;
+      background: $orange;
+      border-radius: 13px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+    &:after{
+      content: '';
+      width: 47px;
+      height: 47px;
+      background: url('#{$img-path}/selection.svg') no-repeat center center;
+      border-radius: 13px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+    &:nth-child(2){
+      &:before{
+        background: $h-orange;
+      }
+      &:after{
+        background: url('#{$img-path}/water-sport.svg') no-repeat center center;
+
+      }
+    }
+    &:nth-child(3){
+      &:before{
+        background: $blue-sapphire;
+      }
+      &:after{
+        background: url('#{$img-path}/taxi.svg') no-repeat center center;
+
+      }
+    }
+
+    &--title{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      @include font-size(16);
+      line-height: 1.25;
+      color: $de-blue;
+      margin-bottom: 4px;
+    }
+    &--text{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      @include font-size(16);
+      line-height: 1.25;
+      color: $de-blue;
+      max-width: 327px;
+    }
+  }
+  &__trip{
+    background: $white;
+    width: fit-content  ;
+    border-radius: 26px;
+    padding: 20px 24px 31px;
+    position: relative;
+    box-shadow: 0px 1.8518518209457397px 3.1481480598449707px rgba(0, 0, 0, 0), 0px 8.148148536682129px 6.518518447875977px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 38.51852035522461px 25.481481552124023px rgba(0, 0, 0, 0.01), 0px 64.81481170654297px 46.85185241699219px rgba(0, 0, 0, 0.02), 0px 100px 80px rgba(0, 0, 0, 0.02);
+    &--img{
+      margin-bottom: 21px;
+    }
+    &--title{
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(18);
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+      color:$v-black;
+      margin-bottom: 13px;
+    }
+    &--text{
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(16);
+      line-height: 1.25;
+      letter-spacing: 0em;
+      color: $r-silver;
+      margin-bottom: 21px;
+      span{
+        &:first-child{
+          margin-left: -4px;
+        }
+        margin-left: 6px;
+      }
+    }
+    &--actions{
+      gap: 17px;
+      margin-bottom: 29px;
+      padding-left: 3px;
+    }
+    &--count{
+      padding-left: 31px;
+      background: url('#{$img-path}/building.svg') no-repeat left;
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(16);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: $r-silver;
+      padding-top: 1px;
+    }
+  }
+  &__ongoing{
+    position: absolute;
+    background: $white;
+    border-radius: 18px;
+    padding: 18px 25px 22px 20px;
+    bottom: 51px;
+    right: 2px;
+    gap: 11px;
+    box-shadow: 0px 1.8518518209457397px 3.1481480598449707px rgba(0, 0, 0, 0), 0px 8.148148536682129px 6.518518447875977px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 38.51852035522461px 25.481481552124023px rgba(0, 0, 0, 0.01), 0px 64.81481170654297px 46.85185241699219px rgba(0, 0, 0, 0.02), 0px 100px 80px rgba(0, 0, 0, 0.02);
+    &--img{
+      img{
+        margin-top: 2px;
+      }
+    }
+    &--sub{
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(14);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      color: $r-silver;
+      margin-bottom: 5px;
+    }
+    &--title{
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(18);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: $v-black;
+      margin-bottom: 14px;
+    }
+    &--status{
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      @include font-size(14);
+      line-height: 1.25;
+      letter-spacing: -0.05em;
+      margin-bottom: 10px;
+      color: $v-black;
+      span{
+        color: $purple;
+        margin-left: -1px;
+      }
+    }
+    &--progress{
+      width: 156px;
+      height: 5px;
+      border-radius: 30px;
+      background: $cultured;
+      position: relative;
+      &:after{
+        content: '';
+        width: 73px;
+        background: $purple;
+        height: 5px;
+        border-radius: 30px;
+        position: absolute;
+        left: 1px;
+        top: 0;
+      }
+    }
+  }
+
+}
