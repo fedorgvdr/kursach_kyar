@@ -1,0 +1,107 @@
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0a1f44, #001f3f);
+  color: #fff;
+  overflow: hidden;
+}
+
+.sky {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background: url('https://pngimg.com/uploads/cloud/cloud_PNG16.png') no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 100px;
+  opacity: 0.5;
+  animation: float 60s linear infinite;
+}
+
+.cloud1 { top: 10%; left: -200px; animation-delay: 0s; }
+.cloud2 { top: 30%; left: -300px; animation-delay: 10s; }
+.cloud3 { top: 60%; left: -400px; animation-delay: 20s; }
+
+@keyframes float {
+  0% { left: -300px; }
+  100% { left: 110%; }
+}
+
+.plane {
+  position: absolute;
+  bottom: 20%;
+  left: -100px;
+  animation: fly 15s linear infinite;
+}
+
+.plane img {
+  width: 100px;
+  transform: rotate(15deg);
+}
+
+@keyframes fly {
+  0% { left: -100px; bottom: 20%; }
+  50% { left: 50%; bottom: 40%; }
+  100% { left: 110%; bottom: 20%; }
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.content h1 {
+  font-size: 8rem;
+  margin: 0;
+  color: #00bfff;
+  animation: pulse 2s infinite;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #00bfff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0099cc;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#map {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  z-index: 5;
+  border: 2px solid #00bfff;
+  border-radius: 10px;
+}
